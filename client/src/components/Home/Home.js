@@ -61,7 +61,11 @@ const Home = () => {
                 if (location.state.status == 200) {
                     setAuthSuccess('Success');
                     setUser(JSON.parse(localStorage.getItem('user')));
-                    dispatch(getAll('applications', user));
+                    if (location.state.response == 'You\'ve successfully logged in!') {
+                        dispatch(getAll('applications', user, true));
+                    } else {
+                        dispatch(getAll('applications', user, false));
+                    }
                     const tour = localStorage.getItem('tour');
                     if (tour) {
                         const tourArr = tour.split(',');

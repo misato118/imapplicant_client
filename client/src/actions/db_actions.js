@@ -92,10 +92,11 @@ export const addSubTable = (tableName, id) => async(dispatch) => {
 }
 
 // Get all data from a table
-export const getAll = (tableName, user) => async(dispatch) => {
+export const getAll = (tableName, user, returnedUser) => async(dispatch) => {
     try {
+        console.log('getAll ' + returnedUser + JSON.stringify(user));
         let dispatchData;
-        const mongoData = tableName == 'applications' && user ? await api.getApplications() : undefined;
+        const mongoData = tableName == 'applications' && (user || returnedUser) ? await api.getApplications() : undefined;
         const localData = await appDB[tableName].toArray();
         
         dispatchData = mongoData ? mongoData.data : localData;
