@@ -1,7 +1,7 @@
 import axios from 'axios'; // A Javascript library to make HTTP requests from node.js or XMLHttpRequests from the browser.
 
 //const API = axios.create({ baseURL: 'http://localhost:5000' }); // API is an instance of axios
-const API = axios.create({ baseURL: 'https://web-server-imapplicant-server.onrender.com' }); // API is an instance of axios
+const API = axios.create({ baseURL: 'https://web-server-imapplicant-server-test.onrender.com' }); // API is an instance of axios
 
 API.interceptors.request.use((req) => {
     if (localStorage.getItem('user')) {

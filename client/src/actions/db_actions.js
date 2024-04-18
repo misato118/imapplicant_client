@@ -46,7 +46,7 @@ export const addData = (formData) => async(dispatch, navigate) => {
 
         appDB.applications.delete(appIdGlobal);
         //window.location = 'http://localhost:3000/error';
-        window.location = 'https://imapplicant-client.onrender.com/error';
+        window.location = 'https://imapplicant-client-test.onrender.com/error';
     }
 }
 
@@ -75,7 +75,7 @@ export const updateData = (formData, updatedAppId, mongoAppId) => async(dispatch
     } catch (error) {
         console.log('Error! ' + error);
         //window.location = 'http://localhost:3000/error';
-        window.location = 'https://imapplicant-client.onrender.com/error';
+        window.location = 'https://imapplicant-client-test.onrender.com/error';
     }  
 }
 
@@ -134,7 +134,7 @@ export const getAll = (tableName, user) => async(dispatch) => {
             if (errorName.data) {
                 if (errorName.data == 'No user found') {
                     //window.location = 'http://localhost:3000/auth';
-                    window.location = 'https://imapplicant-client.onrender.com/auth';
+                    window.location = 'https://imapplicant-client-test.onrender.com/auth';
                 } else if (errorName.data.message == 'TokenExpiredError') { // If TokenExpiredError occurs on server side, just make the user logout
                     dispatch({ type: 'LOGOUT' });
                 }
@@ -252,11 +252,11 @@ export const updateStatus = (app, newStatus) => async(dispatch) => {
             if (errorName.data) {
                 if (errorName.data == 'No user found') {
                     //window.location = 'http://localhost:3000/auth';
-                    window.location = 'https://imapplicant-client.onrender.com/auth';
+                    window.location = 'https://imapplicant-client-test.onrender.com/auth';
                 } else if (errorName.data.message == 'TokenExpiredError') { // If TokenExpiredError occurs on server side, just make the user logout
                     dispatch({ type: 'LOGOUT' });
                     //window.location = 'http://localhost:3000/auth';
-                    window.location = 'https://imapplicant-client.onrender.com/auth';
+                    window.location = 'https://imapplicant-client-test.onrender.com/auth';
                 }
             }
         }
