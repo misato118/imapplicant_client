@@ -1,0 +1,23 @@
+{
+    "lang": "en-us",
+    "name": "I'm Applicant",
+    "short_name": "imapplicant",
+    "description": "",
+    "start_url": "/",
+    "background_color": "#2f3d58",
+    "theme_color": "#2f3d58",
+    "orientation": "any",
+    "display": "standalone",
+    "icons": [
+        {
+            "src": "/temp.png",
+            "sizes": "512x512"
+        }
+    ],
+    "related_applications": [
+        {
+            "platform": "webapp",
+            "url": "http://localhost:8080/manifest.json"          
+        }
+    ]
+}
