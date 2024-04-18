@@ -26,6 +26,7 @@ async function addToApps (id, formData) {
 
         // Pass all requirements in app
         const { data } = await api.addRequirements(formData.requirements, id);
+        console.log('req data ' + JSON.stringify(data));
         addResearchRequirements(data);
     } catch (error) {
         console.log('Error! ' + error);
